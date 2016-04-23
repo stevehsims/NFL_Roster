@@ -10,18 +10,18 @@ function Player(name, position, numbr) {
 
 }
 
-    function add() {
+function add() {
 
-        var nameVal = $("#name").val()
-        var positionVal = $("#position").val()
-        var numbr = $("#number").val()
-        var temp = new Player(nameVal, positionVal, numbr)
-        roster.push(temp)
-        console.log(nameVal)
-        console.log(roster)
-        draw()
+    var nameVal = $("#name").val()
+    var positionVal = $("#position").val()
+    var numbr = $("#number").val()
+    var temp = new Player(nameVal, positionVal, numbr)
+    roster.push(temp)
+    console.log(nameVal)
+    console.log(roster)
+    draw()
 
-    }
+}
 $('form').submit(add)
 
 function draw() {
@@ -32,6 +32,9 @@ function draw() {
             '<div class="player-card">' +
             '<img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="Packers Nation">' +
             '<br>' +
+            '<button class="btn btn-danger">Remove</button>' +
+            '<br>' +
+            '<br>' +
             '<span>Player Name :' + current.playerName + '</span>' +
             '<br>' +
             '<span>Player Position :' + current.playerPosition + '</span>' +
@@ -41,3 +44,13 @@ function draw() {
         )
     }
 } 
+
+    $(".player-roster").on("click",".btn",function(){
+    $(this).closest($(".player-card")).remove()
+    
+    roster.splice($(this).id,1)
+    
+    
+})   
+        
+           

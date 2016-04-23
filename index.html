@@ -15,6 +15,9 @@
                 <div class="player-card">
                     <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="Packers Nation">
                     <br>
+                    <button class="btn btn-warning">Remove</button>
+                    <br>
+                    <br>
                     <span>Player Name</span>
                     <br>
                     <span>Player Position</span>
@@ -34,10 +37,20 @@
 
 
         </div>
+        <input type="text" id="query">
+        <button>Find</button>
+        <button class="clear-filter-button">Clear Filter</button>
+        <div class="roster">
+
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="app.js"></script>
+    <script src="player-service.js"></script>
+    <script src="roster-controller.js"></script>
+
+
 </body>
 
 </html>
